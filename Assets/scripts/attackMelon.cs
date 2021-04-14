@@ -33,7 +33,7 @@ public class attackMelon : MonoBehaviour
     void Update()
     {
         anim.SetInteger("AttackingState", 2);
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
             
              anim.SetInteger("AttackingState", attackNum);
