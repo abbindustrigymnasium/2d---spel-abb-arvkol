@@ -12,10 +12,12 @@ public class Restart : MonoBehaviour
    public static int chosenLevel = 1;//global variable accesed from other scenes
 
      void Start() {
-          if(chosenLevel == 1)
-               t.text = "Game Over Nub, HighScore:" + PlayerPrefs.GetInt("normalHighScore").ToString();
-          if(chosenLevel == 3)
-               t.text = "Game Over Nub, HighScore:" + PlayerPrefs.GetInt("melonHighScore").ToString();
+          if(Time.timeScale == 1){
+               if(chosenLevel == 1)
+                    t.text = "Game Over Nub, HighScore:" + PlayerPrefs.GetInt("normalHighScore").ToString();
+               if(chosenLevel == 3)
+                   t.text = "Game Over Nub, HighScore:" + PlayerPrefs.GetInt("melonHighScore").ToString();
+          }
      }
 
    public void restart(){

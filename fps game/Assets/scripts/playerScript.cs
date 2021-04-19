@@ -7,9 +7,11 @@ public class playerScript : MonoBehaviour
 
     public Transform playerBody;
 
+    public GameObject returnButton;
+
     private float mouseSensitivity = 100f;
      
-   float xRotation = 0;
+    float xRotation = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -23,10 +25,12 @@ public class playerScript : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(Time.timeScale == 0){
                 Time.timeScale = 1;
+                returnButton.SetActive(false);
                 //Time.fixedDeltaTime = 1;
             }
             else{
                 Time.timeScale = 0;
+                returnButton.SetActive(true);
                 //Time.fixedDeltaTime = 0;
             }
         }
