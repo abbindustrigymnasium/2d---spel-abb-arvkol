@@ -28,6 +28,8 @@ public class Restart : MonoBehaviour
      SceneManager.LoadScene(chosenLevel/*SceneManager.GetActiveScene().buildIndex-1*/);
    }
    public void MainMenu(){
+        Time.timeScale = 1;
         SceneManager.LoadScene(0/*SceneManager.GetActiveScene().buildIndex-1*/);
+        Debug.Log("wtf");
    }
 }

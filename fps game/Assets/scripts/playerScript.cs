@@ -7,8 +7,6 @@ public class playerScript : MonoBehaviour
 
     public Transform playerBody;
 
-    public GameObject returnButton;
-
     private float mouseSensitivity = 100f;
      
     float xRotation = 0;
@@ -22,18 +20,6 @@ public class playerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(Time.timeScale == 0){
-                Time.timeScale = 1;
-                returnButton.SetActive(false);
-                //Time.fixedDeltaTime = 1;
-            }
-            else{
-                Time.timeScale = 0;
-                returnButton.SetActive(true);
-                //Time.fixedDeltaTime = 0;
-            }
-        }
         
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
