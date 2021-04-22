@@ -46,7 +46,7 @@ public class SpawnEnemeies : MonoBehaviour
         {
             EnemyMovement em = enemy.GetComponent<EnemyMovement>();
             if(em != null){
-                em.speed = 3f+0.1f*waveNum;
+                em.speed = 5f+0.3f*waveNum;
                 if(em.speed > 9)
                     em.speed = 9;
             }

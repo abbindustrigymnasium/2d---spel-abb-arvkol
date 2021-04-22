@@ -1061,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   t: {fileID: 750174154}
+  mixer: {fileID: 24100000, guid: 3ded759dc0be1af48b0999dd5e9db9ff, type: 2}
 --- !u!1 &1833655864
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,10 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class Restart : MonoBehaviour
 {
    public TextMeshProUGUI t;
+
+   public AudioMixer mixer;
 
    public static int chosenLevel = 1;//global variable accesed from other scenes
 
@@ -21,7 +24,9 @@ public class Restart : MonoBehaviour
      }
 
    public void restart(){
-      
+
+     mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("sliderVal"))*20);
+
      SpawnEnemeies.waveNum = 0;
      shootMelon.waveNum = 0;
 

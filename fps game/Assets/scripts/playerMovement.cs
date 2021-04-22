@@ -28,7 +28,7 @@ public class playerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
         
        
-        onGround = Physics.CheckSphere(groundCheck.position, 0.2f, groundMask);
+        onGround = Physics.CheckSphere(groundCheck.position, 0.1f, groundMask);
        /* if(Physics.OverlapSphere(groundCheck.position, 0.1f).Length < 2){
            onGround = false;
         }else{onGround = true;}*/
