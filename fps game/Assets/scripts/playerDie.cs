@@ -22,8 +22,8 @@ public class playerDie : MonoBehaviour
              // Restart r = s.GetComponent<Restart>();
              Restart.chosenLevel = SceneManager.GetActiveScene().buildIndex;
              if(Restart.chosenLevel == 1){
-                 if(SpawnEnemeies.waveNum > PlayerPrefs.GetInt("normalHighScore")){
-                     PlayerPrefs.SetInt("normalHighScore", SpawnEnemeies.waveNum);
+                 if(attack.score > PlayerPrefs.GetInt("normalHighScore")){
+                     PlayerPrefs.SetInt("normalHighScore", attack.score);
                  }
              }
              else if(Restart.chosenLevel == 3){

@@ -18,6 +18,8 @@ public class attack : MonoBehaviour
 
     int attackNum = 0;
 
+    public static int score = 0;
+
     GameObject exploder;
 
     AudioSource splatSound;
@@ -64,6 +66,7 @@ public class attack : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         SpawnEnemeies se = enemySpawner.GetComponent<SpawnEnemeies>();
         if (other.CompareTag("Enemy") && attacking) { 
+            attack.score += 100;
             killParticle();
             exploder = ((Transform)Instantiate(particleSys, other.transform.position, other.transform.rotation)).gameObject;
             Destroy(other.transform.root.gameObject);   

@@ -29,6 +29,7 @@ public class Restart : MonoBehaviour
 
      SpawnEnemeies.waveNum = 0;
      shootMelon.waveNum = 0;
+     attack.score = 0;
 
      SceneManager.LoadScene(chosenLevel/*SceneManager.GetActiveScene().buildIndex-1*/);
    }

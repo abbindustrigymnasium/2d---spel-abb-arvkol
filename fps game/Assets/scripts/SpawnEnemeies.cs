@@ -38,7 +38,7 @@ public class SpawnEnemeies : MonoBehaviour
             targetCount ++;
             
         }
-        t.text = waveNum.ToString();
+        t.text =attack.score.ToString();
     }
 
     /*IEnumerator*/ void spawn(){
