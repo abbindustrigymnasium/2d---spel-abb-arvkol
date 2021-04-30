@@ -14,13 +14,14 @@ public class playerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //disables cursor
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //rotates player camera depending on mouse movement
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 

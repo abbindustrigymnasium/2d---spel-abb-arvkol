@@ -6,20 +6,13 @@ using UnityEngine.SceneManagement;
 public class playerDie : MonoBehaviour
 {
     // public GameObject s;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //if the player collids with enemie he dies
     private void OnTriggerEnter(Collider other) {
          if (other.CompareTag("Enemy")) { 
              // Restart r = s.GetComponent<Restart>();
+
+             //gets which gameMode was played and changes variables to display highScore accordingly
              Restart.chosenLevel = SceneManager.GetActiveScene().buildIndex;
              if(Restart.chosenLevel == 1){
                  if(attack.score > PlayerPrefs.GetInt("normalHighScore")){

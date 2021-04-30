@@ -43,10 +43,10 @@ public class shootMelon : MonoBehaviour
             waveNum++;
             
         }
-        t.text = waveNum.ToString();
+        t.text = waveNum.ToString();//update the text displaying the current level
     }
 
-    /*IEnumerator*/ void spawn(){
+    /*IEnumerator*/ void spawn(){//prepares and initiates new enemy
     
         melonMovement em = enemy.GetComponent<melonMovement>();
         if(em != null)
@@ -60,7 +60,7 @@ public class shootMelon : MonoBehaviour
         enemyCount = 1;
     }
 
-    IEnumerator initMelon(){
+    IEnumerator initMelon(){//initiates a new enemy/melon
         killParticle(); 
         yield return new WaitForSeconds(1.2f);
         Vector3 adjustedCanon = canon.position+new Vector3(5,-1,10);

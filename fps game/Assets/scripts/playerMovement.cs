@@ -27,7 +27,7 @@ public class playerMovement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
         
-       
+       //if the player touches the ground then he can jump
         onGround = Physics.CheckSphere(groundCheck.position, 0.1f, groundMask);
        /* if(Physics.OverlapSphere(groundCheck.position, 0.1f).Length < 2){
            onGround = false;
@@ -35,7 +35,7 @@ public class playerMovement : MonoBehaviour
 
         velocity.y += -10*Time.deltaTime;
 
-        if(onGround && Input.GetKey(KeyCode.Space)){
+        if(onGround && Input.GetKey(KeyCode.Space)){//makes player jump
            velocity.y = Mathf.Sqrt(3*-2*-10);
         }
         if(onGround && velocity.y < 0){

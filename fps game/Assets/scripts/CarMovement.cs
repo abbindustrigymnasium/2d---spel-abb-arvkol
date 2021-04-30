@@ -10,8 +10,6 @@ public class CarMovement : MonoBehaviour
 
     float speed = 32f;
 
-    bool rotate = true;
-
     Vector3 direction;
     // Start is called before the first frame update
     void Start()
@@ -21,16 +19,11 @@ public class CarMovement : MonoBehaviour
 
     // Update is called once per frame
 
-     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Enemy") ) { 
-            rotate = false;
-        }     
-    }
 
     void Update()
     {
        
-        direction = pointer.position - car.position;
+        direction = pointer.position - car.position;//get the direction to head towards
 
         Vector3 lookPos = pointer.position - car.position;;
         lookPos.y = 0;
@@ -42,8 +35,7 @@ public class CarMovement : MonoBehaviour
         direction = Vector3.Normalize(direction);
 
         if( (pointer.position - car.position).magnitude > 1)
-            car.position += direction*speed*Time.deltaTime;
+            car.position += direction*speed*Time.deltaTime;//add vector to the position
 
-        //rotate = true;    
     }
 }

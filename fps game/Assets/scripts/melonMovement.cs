@@ -19,6 +19,7 @@ public class melonMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //makes the melon move forwards and rotates it if the game is unpaused
         angle ++;
 
         direction = new Vector3(0,0,1);

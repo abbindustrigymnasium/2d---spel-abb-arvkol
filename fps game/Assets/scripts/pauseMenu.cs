@@ -9,6 +9,7 @@ public class pauseMenu : MonoBehaviour
 
     public GameObject returnButton;
     private void Update() {
+        //checking if the player is pausing the game
         if(Input.GetKeyDown(KeyCode.Escape)){
             if(Time.timeScale == 0){
                 Time.timeScale = 1;

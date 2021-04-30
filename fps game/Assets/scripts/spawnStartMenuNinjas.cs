@@ -13,6 +13,7 @@ public class spawnStartMenuNinjas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+         ninjas = 0;
          scale = new Vector3(4.1f, 4.1f, 4.1f);
     }
 

@@ -24,7 +24,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        //makes the enemies face and walk towards the player
         direction = player.position -enemy.position;
 
         Vector3 lookPos = player.position - enemy.position;

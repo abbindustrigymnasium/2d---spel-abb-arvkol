@@ -22,6 +22,7 @@ public class SpawnEnemeies : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //spawns a initial enemy so that the player can kill the ammount of enemies necesary to progress since a enemy is used a refrence for other enemies to spawn(check the scene to understand)
         xPos = Random.Range(-4, 11);
         zPos = Random.Range(10, 24);
         Instantiate(enemy, new Vector3(xPos, 12, zPos), Quaternion.identity);
@@ -30,6 +31,7 @@ public class SpawnEnemeies : MonoBehaviour
     }
     void Update(){
         //Debug.Log(enemyCount);
+        //checks if a new wave of enemies should spawn
         if(enemyCount <= 0){
             enemyCount = 0;
             //StartCoroutine(spawn());
@@ -41,7 +43,7 @@ public class SpawnEnemeies : MonoBehaviour
         t.text =attack.score.ToString();
     }
 
-    /*IEnumerator*/ void spawn(){
+    /*IEnumerator*/ void spawn(){//initiates wave of enemies
         for(int e = enemyCount; e < targetCount; e++)
         {
             EnemyMovement em = enemy.GetComponent<EnemyMovement>();

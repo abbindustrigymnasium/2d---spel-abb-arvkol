@@ -25,8 +25,9 @@ public class Restart : MonoBehaviour
 
    public void restart(){
 
-     mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("sliderVal"))*20);
+     mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("sliderVal"))*20);//update mixer volume
 
+     //reset global variables to 0
      SpawnEnemeies.waveNum = 0;
      shootMelon.waveNum = 0;
      attack.score = 0;

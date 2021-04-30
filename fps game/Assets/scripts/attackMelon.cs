@@ -26,12 +26,13 @@ public class attackMelon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        splatSound = splatSoundObject.GetComponent<AudioSource>();
+        splatSound = splatSoundObject.GetComponent<AudioSource>();//getting audioSource
     }
 
     // Update is called once per frame
     void Update()
     {
+        //checking if the player presses mousebutton and decides what attack animation to play
         anim.SetInteger("AttackingState", 2);
         if (Input.GetMouseButtonDown(0) && Time.timeScale == 1)
         {
@@ -61,6 +62,7 @@ public class attackMelon : MonoBehaviour
             Destroy(melonParticle);
     }
 
+    //checks for collision
     private void OnTriggerEnter(Collider other) {
         shootMelon sm = melonSpawn.GetComponent<shootMelon>();
         if (other.CompareTag("Enemy") && attacking) { 

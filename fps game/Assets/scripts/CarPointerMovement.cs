@@ -19,6 +19,7 @@ public class CarPointerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //updates pointer position for car object to follow
        horizontalDir = Input.GetAxis("Horizontal");
        verticalDir = Input.GetAxis("Vertical") ;
        Vector3 move = new Vector3(horizontalDir,0, verticalDir);
